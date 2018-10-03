@@ -7,7 +7,7 @@
         <title>PRUEBA DE PHP CON BOOTSTRAP</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body style="background-color:  #666">
+    <body style="background-color:  #666; color: white">
         <div class="container" id="principal">
             <div class="row">
                 <div class="col-12">
