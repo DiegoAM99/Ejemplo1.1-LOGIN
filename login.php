@@ -1,4 +1,8 @@
 <?php
+
+session_start();//inicia sesion del navegador en el servidor PHP
+                //o la continua si ya estuviera iniciada
+
 include ('misfunciones.php');
 
 function limpiaPalabra($palabra){
@@ -24,11 +28,13 @@ $resultadoQuery = $mysqli -> query("SELECT * FROM usuarios WHERE nombreUsuario =
 
 $numUsuarios = $resultadoQuery -> num_rows;
 
-//for( $i = 0; $i < $numPreguntas; $i++){
-//    $r = $resultadoQuery -> fetch_array();
-//    echo $r['nombreUsuario'] , '<br/>';
-//}
 if($numUsuarios > 0){
+    $r = $resultadoQuery -> fetch_array();
+    //en la variable de sesion "nombreUsuario" guardo el nombre de usuario
+    $_SESSION['nombreUsuario'] = $cajaNombre;
+    
+    //en la variable de session idUsuario guardo el id de usuario leido de la BBDD
+    $_SESSION['idUsuario'] = $r['idUsuario'];
     //muestra la pantalla de la aplicacion
     require 'app.php';
 }

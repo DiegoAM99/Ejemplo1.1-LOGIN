@@ -1,4 +1,5 @@
 <?php
+session_start();
 //capturo los valores de los parámetros que me han sido pasados
 //desde app.php
 include ('misFunciones.php');
@@ -31,6 +32,7 @@ $listaPreguntas = array();
 <div>
     <p></p>
     <p><a  class="btn btn-block btn-dark disabled" >Demuestra que estás listo para la EVAU</a></p>
+    <p><a  class="btn btn-block btn-dark disabled" ><?php echo $_SESSION['nombreUsuario']?></a></p>
     <p><a  class="btn btn-block btn-warning" onclick="volver();">Volver al Menú</a></p>
     
     <p><a id="sigue1" class="btn btn-block btn-primary" ><?php echo $tema;?></a></p>
