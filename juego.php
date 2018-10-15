@@ -74,7 +74,7 @@ $listaPreguntas = array();
            tiempo.removeClass("bg-success").addClass("bg-warning"); 
         }
         else{
-            tiempo.removeClass("bg-warning").addClass("bg-success");
+            tiempo.removeClass("bg-warning").addClass("bg-danger");
         }
         tiempo.text(segundo);
     }, 3600);
