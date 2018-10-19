@@ -25,4 +25,29 @@
         }
     }
     
+    function muestraModalPrueba(){
+        $('#modalPrueba').modal('show');
+    }
+    
 </script>
+<div id="modalPrueba" class="modal" tabindex="-1" role="dialog" style="color:#6c757d;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal de prueba</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Hola K Ase telekinesis o k ase</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php
